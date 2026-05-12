@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
 use App\Http\Controllers\Admin\ProductVideoController as AdminVideoController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\ReviewController;
+
 
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
