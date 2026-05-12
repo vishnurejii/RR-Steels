@@ -38,6 +38,5 @@ RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
     && npm install \
     && npm run build
 
-# Expose port 8000 and start php artisan serve
-EXPOSE 8000
-CMD php artisan serve --host=0.0.0.0 --port=8000
+# Expose port and start php artisan serve
+CMD php artisan serve --host=0.0.0.0 --port=$PORT
