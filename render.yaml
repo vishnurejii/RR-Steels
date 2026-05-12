@@ -11,17 +11,9 @@ services:
         value: production
       - key: DB_CONNECTION
         value: mongodb
-      - key: APP_KEY
-        fromParam: appKey
-      - key: MONGODB_URI
-        fromParam: mongodbUri
       - key: MONGODB_DATABASE
         value: steel_retail
-
-parameters:
-  - key: appKey
-    description: Laravel Application Key (base64:...)
-    required: true
-  - key: mongodbUri
-    description: MongoDB Atlas Connection String
-    required: true
+      - key: APP_KEY
+        sync: false
+      - key: MONGODB_URI
+        sync: false
