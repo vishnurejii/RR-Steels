@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: rr-steels
+    env: docker
+    plan: free
+    region: singapore
+    envVars:
+      - key: APP_DEBUG
+        value: false
+      - key: APP_ENV
+        value: production
+      - key: DB_CONNECTION
+        value: mongodb
+      - fromContext: parameter
+        key: APP_KEY
+      - fromContext: parameter
+        key: MONGODB_URI
+      - key: MONGODB_DATABASE
+        value: steel_retail
