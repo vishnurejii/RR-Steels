@@ -6,14 +6,22 @@ services:
     region: singapore
     envVars:
       - key: APP_DEBUG
-        value: false
+        value: "false"
       - key: APP_ENV
         value: production
       - key: DB_CONNECTION
         value: mongodb
-      - fromContext: parameter
-        key: APP_KEY
-      - fromContext: parameter
-        key: MONGODB_URI
+      - key: APP_KEY
+        fromParam: appKey
+      - key: MONGODB_URI
+        fromParam: mongodbUri
       - key: MONGODB_DATABASE
         value: steel_retail
+
+parameters:
+  - key: appKey
+    description: Laravel Application Key (base64:...)
+    required: true
+  - key: mongodbUri
+    description: MongoDB Atlas Connection String
+    required: true
