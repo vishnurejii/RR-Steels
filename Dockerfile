@@ -36,6 +36,7 @@ RUN composer install --no-dev --optimize-autoloader
 RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs \
     && npm install \
+    && rm -f public/hot \
     && npm run build
 
 # Expose port and start php artisan serve
