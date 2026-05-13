@@ -19,7 +19,7 @@
                 
                 <!-- Logo in Right Corner -->
                 <div class="ml-4 border-l border-gray-700 pl-4">
-                    <img src="/assets/logo/logo.png" alt="RR STEEL Logo" class="h-12 w-12 rounded-full object-cover border-2 border-teal-600 shadow-lg">
+                    <img src="/assets/logo/logo.jpeg" alt="RR STEEL Logo" class="h-12 w-12 rounded-full object-cover border-2 border-teal-600 shadow-lg">
                 </div>
             </div>
 

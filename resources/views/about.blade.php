@@ -53,7 +53,7 @@
             <!-- Image -->
             <div class="w-full lg:w-1/2 relative">
                 <div class="absolute -top-6 -left-6 w-32 h-32 bg-teal-50 rounded-[2rem] -z-10"></div>
-                <img src="/assets/images/about-1.jpg"
+                <img src="/assets/images/about-1.jpeg"
                      class="rounded-[2rem] shadow-2xl w-full object-cover h-[500px]" alt="RR STEEL Warehouse"
                      loading="eager" decoding="async">
                 <div class="absolute -bottom-8 -right-8 bg-gray-900 text-white p-8 rounded-[1.5rem] shadow-2xl hidden md:block">
@@ -236,7 +236,7 @@
 
             <div class="w-full lg:w-1/2 relative">
                 <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-teal-100 rounded-[2rem] -z-10"></div>
-                <img src="/assets/images/about-2.jpg"
+                <img src="/assets/images/about-2.jpeg"
                      class="rounded-[2rem] shadow-2xl w-full object-cover h-[540px]" alt="RR STEEL Facility"
                      loading="lazy" decoding="async">
             </div>
