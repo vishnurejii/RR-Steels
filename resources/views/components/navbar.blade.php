@@ -4,7 +4,7 @@
             <div class="flex items-center">
                 <a href="{{ route('home') }}" class="flex items-center space-x-2">
                     <span class="text-2xl font-extrabold tracking-tighter uppercase italic">
-                        R R <span class="text-gray-400">STEELS</span>
+                        RR <span class="text-gray-400">STEEL</span>
                     </span>
                     <div class="w-2 h-8 bg-gray-500 transform -skew-x-12"></div>
                 </a>
@@ -16,6 +16,11 @@
                 <a href="{{ route('about') }}" class="font-semibold hover:text-gray-400 transition-colors">ABOUT US</a>
                 <a href="{{ route('contact') }}" class="font-semibold hover:text-gray-400 transition-colors">CONTACT</a>
                 <a href="{{ route('quote.request') }}" class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-full font-bold transition-all transform hover:scale-105">REQUEST QUOTE</a>
+                
+                <!-- Logo in Right Corner -->
+                <div class="ml-4 border-l border-gray-700 pl-4">
+                    <img src="/assets/logo/logo.png" alt="RR STEEL Logo" class="h-12 w-auto object-contain">
+                </div>
             </div>
 
             <!-- Mobile menu button -->
