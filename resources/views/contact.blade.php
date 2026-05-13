@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us - RR STEEL')
+@section('title', 'Contact Us - RR STEELS')
 
 @section('content')
 <section class="bg-gray-900 py-24 text-white">
@@ -18,7 +18,7 @@
                 <div>
                     <h4 class="text-lg font-black uppercase italic mb-6">Our Office</h4>
                     <p class="text-gray-500 leading-relaxed font-light">
-                        RR STEEL, Kanamkulanghara Road,<br>
+                        RR STEELS, Kanamkulanghara Road,<br>
                         Koorkenchery, Thrissur, Kerala 680007
                     </p>
                 </div>

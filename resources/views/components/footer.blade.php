@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div class="col-span-1 md:col-span-1">
                 <span class="text-2xl font-extrabold tracking-tighter uppercase italic text-white">
-                    RR <span class="text-gray-500">STEEL</span>
+                    RR <span class="text-gray-500">STEELS</span>
                 </span>
                 <p class="mt-4 text-sm leading-relaxed">
                     Reliable steel distribution and supply in Thrissur, Kerala since 2016. Delivering quality steel products and consistent service across the region.
@@ -53,7 +53,7 @@
         </div>
         
         <div class="mt-16 pt-8 border-t border-gray-800 text-center text-xs">
-            <p>&copy; {{ date('Y') }} RR STEEL. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} RR STEELSS. All rights reserved.</p>
         </div>
     </div>
 </footer>

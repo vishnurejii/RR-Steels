@@ -13,7 +13,7 @@
     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <span class="text-teal-400 font-black uppercase tracking-[0.4em] text-xs mb-4 block">Since 2016</span>
         <h1 class="text-6xl md:text-8xl font-black uppercase italic tracking-tighter text-white leading-none">
-            About <span class="text-transparent" style="-webkit-text-stroke:2px #14b8a6;">RR STEEL</span>
+            About <span class="text-transparent" style="-webkit-text-stroke:2px #14b8a6;">RR STEELS</span>
         </h1>
         <p class="text-gray-400 mt-6 uppercase tracking-widest text-sm font-bold">
             Trusted Steel Distribution in Thrissur, Kerala
@@ -54,7 +54,7 @@
             <div class="w-full lg:w-1/2 relative">
                 <div class="absolute -top-6 -left-6 w-32 h-32 bg-teal-50 rounded-[2rem] -z-10"></div>
                 <img src="/assets/images/about-1.jpeg"
-                     class="rounded-[2rem] shadow-2xl w-full object-cover h-[500px]" alt="RR STEEL Warehouse"
+                     class="rounded-[2rem] shadow-2xl w-full object-cover h-[500px]" alt="RR STEELS Warehouse"
                      loading="eager" decoding="async">
                 <div class="absolute -bottom-8 -right-8 bg-gray-900 text-white p-8 rounded-[1.5rem] shadow-2xl hidden md:block">
                     <span class="block text-4xl font-black italic">8+</span>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="w-16 h-1 bg-teal-600"></div>
                 <div class="space-y-5 text-gray-600 leading-relaxed text-lg font-light">
-                    <p>Established in 2016 in Thrissur, Kerala, RR STEEL has built a reputation for providing reliable steel products and dependable customer service to a wide range of clients across the region. Operating in both wholesale and retail markets, we cater to construction companies, fabricators, contractors, and individual customers.</p>
+                    <p>Established in 2016 in Thrissur, Kerala, RR STEELS has built a reputation for providing reliable steel products and dependable customer service to a wide range of clients across the region. Operating in both wholesale and retail markets, we cater to construction companies, fabricators, contractors, and individual customers.</p>
                     <p>The business specializes in the distribution of quality steel materials used in infrastructure, manufacturing, and fabrication works. Over the years, we have focused on maintaining strong relationships with customers by ensuring product availability, competitive pricing, and timely delivery.</p>
                     <p>One of our key strengths is the ability to serve customers of different scales. Our wholesale division supports bulk supply for commercial projects, while our retail division provides flexible options for local builders and household customers.</p>
                 </div>
@@ -110,7 +110,7 @@
 
                 @php
                 $milestones = [
-                    ['year'=>'2016','title'=>'The Beginning','desc'=>'RR STEELS established in Thrissur, Kerala, focusing on reliable steel distribution.','side'=>'left'],
+                    ['year'=>'2016','title'=>'The Beginning','desc'=>'RR STEELSS established in Thrissur, Kerala, focusing on reliable steel distribution.','side'=>'left'],
                     ['year'=>'2018','title'=>'Market Expansion','desc'=>'Expanded presence in both wholesale and retail sectors across the Thrissur region.','side'=>'right'],
                     ['year'=>'2020','title'=>'Infrastructure Focus','desc'=>'Became a key supplier for major infrastructure and manufacturing projects in Kerala.','side'=>'left'],
                     ['year'=>'2022','title'=>'Customer Trust','desc'=>'Achieved significant growth through consistent service and competitive pricing strategies.','side'=>'right'],
@@ -237,7 +237,7 @@
             <div class="w-full lg:w-1/2 relative">
                 <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-teal-100 rounded-[2rem] -z-10"></div>
                 <img src="/assets/images/about-2.jpeg"
-                     class="rounded-[2rem] shadow-2xl w-full object-cover h-[540px]" alt="RR STEEL Facility"
+                     class="rounded-[2rem] shadow-2xl w-full object-cover h-[540px]" alt="RR STEELS Facility"
                      loading="lazy" decoding="async">
             </div>
         </div>
@@ -330,7 +330,7 @@
             <div class="space-y-6">
                 @php
                 $contacts = [
-                    ['icon'=>'📍','label'=>'Address','value'=>'RR Steels, Kanamkulanghara Road, Koorkenchery, Thrissur, Kerala 680007'],
+                    ['icon'=>'📍','label'=>'Address','value'=>'RR STEELSs, Kanamkulanghara Road, Koorkenchery, Thrissur, Kerala 680007'],
                     ['icon'=>'📞','label'=>'Phone','value'=>'+91 98466 56868 (WA) / 8089187504'],
                     ['icon'=>'✉️','label'=>'Email','value'=>'rrsteelk16@gmail.com'],
                     ['icon'=>'🕐','label'=>'Working Hours','value'=>'Monday – Saturday: 9:00 AM – 6:30 PM'],

@@ -56,7 +56,7 @@
 
         <!-- Footer -->
         <p class="text-center mt-8 text-gray-500 text-sm">
-            &copy; {{ date('Y') }} RR STEELS Thrissur. All rights reserved.
+            &copy; {{ date('Y') }} RR STEELSS Thrissur. All rights reserved.
         </p>
     </div>
 </div>

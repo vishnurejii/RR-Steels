@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'RR STEEL - Premium Steel Retail')</title>
+    <title>@yield('title', 'RR STEELSS - Premium Steel Retail')</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

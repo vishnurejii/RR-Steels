@@ -12,7 +12,7 @@
     <!-- Centered Content -->
     <div class="relative z-10 text-center px-4" id="hero-content">
         <h1 class="text-4xl md:text-9xl font-black uppercase italic tracking-tighter" id="hero-title">
-            RR <span class="text-transparent stroke-white" style="-webkit-text-stroke: 2px white;">STEEL</span>
+            RR <span class="text-transparent stroke-white" style="-webkit-text-stroke: 2px white;">STEELS</span>
         </h1>
         <p class="mt-6 text-xl md:text-3xl text-gray-300 font-light max-w-3xl mx-auto" id="hero-desc">
             Forging the future with premium industrial strength.
@@ -47,7 +47,7 @@
                             Serving Thrissur's Construction &amp; Industrial needs.
                         </p>
                         <p class="text-lg text-gray-600 font-light leading-relaxed">
-                            Established in 2016, RR STEELS has built a reputation for providing reliable steel products and dependable customer service. We operate in both wholesale and retail markets, catering to companies, fabricators, and individual customers across Kerala.
+                            Established in 2016, RR STEELSS has built a reputation for providing reliable steel products and dependable customer service. We operate in both wholesale and retail markets, catering to companies, fabricators, and individual customers across Kerala.
                         </p>
                     </div>
                     <div class="pt-6 border-t border-gray-100 flex items-center space-x-4">
@@ -161,7 +161,7 @@
                         </h3>
                         <div class="mt-12 w-20 h-1 bg-orange-500 mx-auto"></div>
                         <p class="mt-12 text-xl text-gray-600 font-light leading-relaxed">
-                            Since 2016, RR STEELS has been providing reliable steel distribution and supply solutions in Thrissur. We don't just supply materials; we build lasting relationships based on trust, quality, and consistent service excellence.
+                            Since 2016, RR STEELSS has been providing reliable steel distribution and supply solutions in Thrissur. We don't just supply materials; we build lasting relationships based on trust, quality, and consistent service excellence.
                         </p>
                         <div class="mt-12 flex justify-center space-x-8">
                             <div class="text-left">
