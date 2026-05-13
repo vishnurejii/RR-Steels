@@ -28,7 +28,7 @@
                         {{ $category->description }}
                     </td>
                     <td class="px-8 py-6 text-sm font-bold text-gray-900">
-                    {{ Product::where('category_id', (string)$category->_id)->count() }}
+                    {{ \App\Models\Product::where('category_id', (string)$category->_id)->count() }}
                     </td>
                     <td class="px-8 py-6 flex space-x-4">
                         <button class="text-gray-900 font-black text-xs uppercase tracking-widest hover:underline italic">Edit</button>

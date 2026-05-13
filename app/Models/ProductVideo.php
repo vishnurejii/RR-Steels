@@ -25,6 +25,11 @@ class ProductVideo extends Model
             return "https://www.youtube.com/embed/" . $matches[1];
         }
 
+        // Handle youtube.com/shorts/ links
+        if (preg_match('/shorts\/([^\?\/]+)/', $url, $matches)) {
+            return "https://www.youtube.com/embed/" . $matches[1];
+        }
+
         return $url;
     }
 }
