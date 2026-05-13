@@ -17,13 +17,28 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
+            'image_url' => 'nullable|url',
+            'image_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $validated['slug'] = Str::slug($request->name);
-        Category::create($validated);
+        $imagePath = $request->image_url;
+
+        if ($request->hasFile('image_file')) {
+            $file = $request->file('image_file');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/categories'), $filename);
+            $imagePath = '/uploads/categories/' . $filename;
+        }
+
+        Category::create([
+            'name' => $request->name,
+            'slug' => \Illuminate\Support\Str::slug($request->name),
+            'description' => $request->description,
+            'image' => $imagePath ?? 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600',
+        ]);
 
         return back()->with('success', 'Category created successfully.');
     }

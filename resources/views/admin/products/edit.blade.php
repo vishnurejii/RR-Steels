@@ -7,7 +7,7 @@
 </div>
 
 <div class="max-w-4xl bg-white rounded-3xl shadow-sm border border-gray-100 p-12">
-    <form action="{{ route('admin.products.update', $product) }}" method="POST">
+    <form action="{{ route('admin.products.update', $product) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -34,6 +34,16 @@
                     <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Price (Optional)</label>
                     <input type="number" step="0.01" name="price" value="{{ old('price', $product->price) }}" 
                         class="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 focus:border-gray-900 outline-none transition-all">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Upload New Image (Optional)</label>
+                    <input type="file" name="image_file" class="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 focus:border-gray-900 outline-none transition-all">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">OR New Image URL</label>
+                    <input type="url" name="image_url" placeholder="https://..." class="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 focus:border-gray-900 outline-none transition-all">
                 </div>
 
                 <div class="flex items-center gap-3">

@@ -9,7 +9,7 @@
 <!-- Add Category Form (Hidden by default) -->
 <div id="category-form" class="hidden mb-12 bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
     <h3 class="text-xl font-black uppercase italic mb-6">Create New Category</h3>
-    <form action="{{ route('admin.categories.store') }}" method="POST">
+    <form action="{{ route('admin.categories.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -19,6 +19,14 @@
             <div>
                 <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Description</label>
                 <input type="text" name="description" required class="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 focus:border-gray-900 outline-none transition-all">
+            </div>
+            <div>
+                <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Upload Image</label>
+                <input type="file" name="image_file" class="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 focus:border-gray-900 outline-none transition-all">
+            </div>
+            <div>
+                <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">OR Image URL</label>
+                <input type="url" name="image_url" placeholder="https://..." class="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 focus:border-gray-900 outline-none transition-all">
             </div>
         </div>
         <div class="mt-8">

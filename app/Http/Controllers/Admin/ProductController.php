@@ -24,21 +24,34 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'name'        => 'required|string|max:255',
             'category_id' => 'required|string',
             'description' => 'required|string',
             'price'       => 'nullable|numeric',
             'is_featured' => 'boolean',
+            'image_url'   => 'nullable|url',
+            'image_file'  => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $validated['slug'] = Str::slug($request->name);
-        $validated['is_featured'] = $request->has('is_featured');
-        
-        // Mocking image for now
-        $validated['image'] = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000';
+        $imagePath = $request->image_url;
 
-        Product::create($validated);
+        if ($request->hasFile('image_file')) {
+            $file = $request->file('image_file');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/products'), $filename);
+            $imagePath = '/uploads/products/' . $filename;
+        }
+
+        Product::create([
+            'name'        => $request->name,
+            'slug'        => \Illuminate\Support\Str::slug($request->name),
+            'category_id' => $request->category_id,
+            'description' => $request->description,
+            'price'       => $request->price,
+            'is_featured' => $request->has('is_featured'),
+            'image'       => $imagePath ?? 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000',
+        ]);
 
         return redirect()->route('admin.products.index')->with('success', 'Product created successfully.');
     }
@@ -51,15 +64,36 @@ class ProductController extends Controller
 
     public function update(Request $request, Product $product)
     {
-        $validated = $request->validate([
+        $request->validate([
             'name'        => 'required|string|max:255',
             'category_id' => 'required|string',
             'description' => 'required|string',
             'price'       => 'nullable|numeric',
+            'image_url'   => 'nullable|url',
+            'image_file'  => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $validated['is_featured'] = $request->has('is_featured');
-        $product->update($validated);
+        $imagePath = $product->image;
+
+        if ($request->image_url) {
+            $imagePath = $request->image_url;
+        }
+
+        if ($request->hasFile('image_file')) {
+            $file = $request->file('image_file');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/products'), $filename);
+            $imagePath = '/uploads/products/' . $filename;
+        }
+
+        $product->update([
+            'name'        => $request->name,
+            'category_id' => $request->category_id,
+            'description' => $request->description,
+            'price'       => $request->price,
+            'is_featured' => $request->has('is_featured'),
+            'image'       => $imagePath,
+        ]);
 
         return redirect()->route('admin.products.index')->with('success', 'Product updated successfully.');
     }
