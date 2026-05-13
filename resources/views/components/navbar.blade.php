@@ -2,11 +2,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
             <div class="flex items-center">
-                <a href="{{ route('home') }}" class="flex items-center space-x-2">
-                    <span class="text-xl font-black uppercase italic tracking-tighter text-white">
-                        RR <span class="text-gray-500">STEEL</span>
-                    </span>
-                    <div class="w-2 h-8 bg-gray-500 transform -skew-x-12"></div>
+                <a href="{{ route('home') }}" class="flex items-center space-x-3">
+                    <img src="/assets/logo/logo.jpeg" alt="RR STEEL Logo" class="h-14 w-14 rounded-full object-cover border-2 border-teal-600 shadow-lg transition-transform hover:scale-110">
+                    <div class="w-2 h-8 bg-gray-500 transform -skew-x-12 ml-2"></div>
                 </a>
             </div>
             
@@ -16,11 +14,6 @@
                 <a href="{{ route('about') }}" class="font-semibold hover:text-gray-400 transition-colors">ABOUT US</a>
                 <a href="{{ route('contact') }}" class="font-semibold hover:text-gray-400 transition-colors">CONTACT</a>
                 <a href="{{ route('quote.request') }}" class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-full font-bold transition-all transform hover:scale-105">REQUEST QUOTE</a>
-                
-                <!-- Logo in Right Corner -->
-                <div class="ml-4 border-l border-gray-700 pl-4">
-                    <img src="/assets/logo/logo.jpeg" alt="RR STEEL Logo" class="h-12 w-12 rounded-full object-cover border-2 border-teal-600 shadow-lg">
-                </div>
             </div>
 
             <!-- Mobile menu button -->
@@ -39,6 +32,9 @@
         <button id="close-menu-btn" class="absolute top-6 right-6 text-gray-400 hover:text-white">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
+        <div class="mb-8">
+            <img src="/assets/logo/logo.jpeg" alt="RR STEEL Logo" class="h-24 w-24 rounded-full object-cover border-4 border-teal-600 shadow-2xl">
+        </div>
         <a href="{{ route('home') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">HOME</a>
         <a href="{{ route('products.index') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">PRODUCTS</a>
         <a href="{{ route('about') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">ABOUT US</a>
