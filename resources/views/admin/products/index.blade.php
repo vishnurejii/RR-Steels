@@ -26,10 +26,14 @@
                         <div class="text-xs text-gray-400 font-bold uppercase tracking-widest">{{ $product->slug }}</div>
                     </td>
                     <td class="px-8 py-6 text-sm text-gray-600">
-                        {{ \App\Models\Category::find($product->category_id)?->name ?? 'N/A' }}
+                        {{ \App\Models\Category::find($product->category_id)?->name ?? 'Uncategorized' }}
                     </td>
                     <td class="px-8 py-6 text-sm font-bold text-gray-900">
-                        ${{ number_format($product->price, 2) }}
+                        @if($product->price)
+                            ₹{{ number_format((float)$product->price, 2) }}
+                        @else
+                            Contact for Price
+                        @endif
                     </td>
                     <td class="px-8 py-6">
                         @if($product->is_featured)

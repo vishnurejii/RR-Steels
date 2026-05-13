@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <div class="p-8">
-                        <span class="text-[10px] font-black uppercase tracking-widest text-teal-600 mb-2 block">{{ $product->category->name ?? 'Structural Steel' }}</span>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-teal-600 mb-2 block">{{ $product->category->name ?? 'Industrial Steel' }}</span>
                         <h3 class="text-xl font-black uppercase tracking-tighter text-gray-900 mb-4 group-hover:text-teal-600 transition-colors">
                             {{ $product->name }}
                         </h3>

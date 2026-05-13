@@ -54,7 +54,7 @@
                             <img src="{{ $product->image ?? 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000' }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="{{ $product->name }}">
                         </div>
                         <div class="p-6">
-                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{{ $product->category->name }}</span>
+                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{{ $product->category->name ?? 'Uncategorized' }}</span>
                             <h3 class="text-lg font-bold mt-1 uppercase">{{ $product->name }}</h3>
                             <div class="mt-4 flex items-center justify-between">
                                 <span class="text-gray-400 text-sm italic font-medium">Contact for price</span>
