@@ -3,7 +3,7 @@
         <div class="flex justify-between min-h-[110px] items-center">
             <div class="flex items-center">
                 <a href="{{ route('home') }}" class="flex items-center py-2">
-                    <img src="/assets/logo/logo.jpeg" alt="RR STEELS Logo" class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover border-2 border-teal-600 shadow-xl transition-transform hover:scale-105">
+                    <img src="/assets/logo/logo.jpeg?v=2" alt="RR STEELS Logo" class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover border-2 border-teal-600 shadow-xl transition-transform hover:scale-105">
                     <div class="w-1 h-12 bg-gray-700 transform -skew-x-12 ml-4"></div>
                 </a>
             </div>
@@ -33,7 +33,7 @@
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
         <div class="mb-8">
-            <img src="/assets/logo/logo.jpeg" alt="RR STEELS Logo" class="h-24 w-24 rounded-full object-cover border-4 border-teal-600 shadow-2xl">
+            <img src="/assets/logo/logo.jpeg?v=2" alt="RR STEELS Logo" class="h-24 w-24 rounded-full object-cover border-4 border-teal-600 shadow-2xl">
         </div>
         <a href="{{ route('home') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">HOME</a>
         <a href="{{ route('products.index') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">PRODUCTS</a>
