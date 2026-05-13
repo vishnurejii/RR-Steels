@@ -20,12 +20,62 @@
 
             <!-- Mobile menu button -->
             <div class="md:hidden flex items-center">
-                <button type="button" class="text-gray-400 hover:text-white focus:outline-none">
+                <button type="button" id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
                     <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
     </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900/95 z-[60] flex flex-col items-center justify-center space-y-8 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-gray-400 hover:text-white">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="{{ route('home') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">HOME</a>
+        <a href="{{ route('products.index') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">PRODUCTS</a>
+        <a href="{{ route('about') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">ABOUT US</a>
+        <a href="{{ route('contact') }}" class="mobile-nav-link text-3xl font-black italic tracking-tighter uppercase">CONTACT</a>
+        <a href="{{ route('quote.request') }}" class="bg-teal-600 px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm">REQUEST QUOTE</a>
+    </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const body = document.body;
+        const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+        const toggleMenu = (open) => {
+            if (open) {
+                menu.classList.remove('translate-x-full');
+                body.classList.add('mobile-menu-open');
+            } else {
+                menu.classList.add('translate-x-full');
+                body.classList.remove('mobile-menu-open');
+            }
+        };
+
+        btn.addEventListener('click', () => toggleMenu(true));
+        closeBtn.addEventListener('click', () => toggleMenu(false));
+        navLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+
+        // Change navbar bg on scroll for home page
+        @if(request()->routeIs('home'))
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-gray-900', 'shadow-xl');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-gray-900', 'shadow-xl');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+        @endif
+    });
+</script>

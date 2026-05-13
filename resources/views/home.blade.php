@@ -60,30 +60,30 @@
 
                 <!-- Right: Hexagon Stats & Building -->
                 <div class="w-full lg:w-7/12 flex flex-col md:flex-row items-center gap-12">
-                    <div class="w-full md:w-1/2" id="excellence-visual">
-                        <div class="relative rounded-[40px] overflow-hidden shadow-2xl h-[550px]">
+                    <div class="w-full md:w-1/2 order-2 md:order-1" id="excellence-visual">
+                        <div class="relative rounded-[40px] overflow-hidden shadow-2xl h-[400px] md:h-[550px]">
                             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000" class="w-full h-full object-cover" alt="Steel Architecture">
                             <div class="absolute inset-0 bg-teal-900/20 mix-blend-overlay"></div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 grid grid-cols-2 gap-y-4" id="excellence-stats">
+                    <div class="w-full md:w-1/2 grid grid-cols-2 gap-y-4 order-1 md:order-2" id="excellence-stats">
                         <div class="flex flex-col gap-4">
-                            <div class="hexagon bg-teal-600 p-6 text-white flex flex-col items-center justify-center text-center shadow-lg">
-                                <span class="text-2xl font-black italic">2016</span>
+                            <div class="hexagon bg-teal-600 p-4 md:p-6 text-white flex flex-col items-center justify-center text-center shadow-lg">
+                                <span class="text-xl md:text-2xl font-black italic">2016</span>
                                 <span class="text-[8px] uppercase font-bold tracking-widest mt-1">Established</span>
                             </div>
-                            <div class="hexagon bg-teal-800 p-6 text-white flex flex-col items-center justify-center text-center shadow-lg transform translate-x-12 -mt-12">
-                                <span class="text-2xl font-black italic">Thrissur</span>
+                            <div class="hexagon bg-teal-800 p-4 md:p-6 text-white flex flex-col items-center justify-center text-center shadow-lg transform translate-x-6 md:translate-x-12 -mt-12">
+                                <span class="text-xl md:text-2xl font-black italic">Thrissur</span>
                                 <span class="text-[8px] uppercase font-bold tracking-widest mt-1">Kerala</span>
                             </div>
                         </div>
                         <div class="flex flex-col gap-4 -mt-8">
-                            <div class="hexagon bg-teal-700 p-6 text-white flex flex-col items-center justify-center text-center shadow-lg">
-                                <span class="text-2xl font-black italic">8+ Yrs</span>
+                            <div class="hexagon bg-teal-700 p-4 md:p-6 text-white flex flex-col items-center justify-center text-center shadow-lg">
+                                <span class="text-xl md:text-2xl font-black italic">8+ Yrs</span>
                                 <span class="text-[8px] uppercase font-bold tracking-widest mt-1">Trust</span>
                             </div>
-                            <div class="hexagon bg-teal-600 p-6 text-white flex flex-col items-center justify-center text-center shadow-lg transform translate-x-12 -mt-12">
-                                <span class="text-2xl font-black italic">100%</span>
+                            <div class="hexagon bg-teal-600 p-4 md:p-6 text-white flex flex-col items-center justify-center text-center shadow-lg transform translate-x-6 md:translate-x-12 -mt-12">
+                                <span class="text-xl md:text-2xl font-black italic">100%</span>
                                 <span class="text-[8px] uppercase font-bold tracking-widest mt-1">Quality</span>
                             </div>
                         </div>
@@ -156,7 +156,7 @@
                 <div class="w-full max-w-4xl bg-white p-12 md:p-24 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transform pointer-events-auto opacity-0" id="story-movable-box">
                     <div class="text-center">
                         <span class="text-sm font-black uppercase tracking-[0.5em] text-gray-400 mb-4 block">OUR STORY</span>
-                        <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-gray-900 leading-none">
+                        <h3 class="text-3xl md:text-7xl font-black uppercase tracking-tighter text-gray-900 leading-none">
                             SHAPING A <br> <span class="text-orange-500">STEEL-STRONG</span> <br> TOMORROW
                         </h3>
                         <div class="mt-12 w-20 h-1 bg-orange-500 mx-auto"></div>
@@ -234,7 +234,7 @@
 
                     <div class="space-y-6">
                         <div class="w-20 h-1 bg-teal-600 mb-8"></div>
-                        <h2 class="text-6xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-gray-900">
+                        <h2 class="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-gray-900">
                             CULTIVATING <br> COMMUNITY <br> <span class="text-teal-600">EXCELLENCE.</span>
                         </h2>
                     </div>
@@ -422,32 +422,37 @@
     document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
 
-        // Initial Hero Animation
+        // Responsiveness: MatchMedia
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 1024px)", () => {
+            // Pin the Hero Section on Desktop
+            ScrollTrigger.create({
+                trigger: "#hero",
+                start: "top top",
+                end: "+=100%",
+                pin: true,
+                pinSpacing: true,
+            });
+
+            // Parallax on the hero background while pinned
+            gsap.to('#hero-bg', {
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top top",
+                    end: "+=100%",
+                    scrub: true
+                },
+                y: 150,
+                scale: 1.1
+            });
+        });
+
+        // Initial Hero Animation (All devices)
         const tl = gsap.timeline();
         tl.from('#hero-title', { y: 100, opacity: 0, duration: 1.5, ease: 'power4.out' })
           .from('#hero-desc', { y: 50, opacity: 0, duration: 1.5, ease: 'power3.out' }, '-=1')
           .to('#scroll-indicator', { opacity: 1, y: -20, duration: 1, ease: 'power2.out' }, '-=0.5');
-
-        // Pin the Hero Section
-        ScrollTrigger.create({
-            trigger: "#hero",
-            start: "top top",
-            end: "+=100%", // Pin for 100% of its height
-            pin: true,
-            pinSpacing: true, // Changed from false to prevent overlap
-        });
-
-        // Slight parallax on the hero background while pinned
-        gsap.to('#hero-bg', {
-            scrollTrigger: {
-                trigger: "#hero",
-                start: "top top",
-                end: "+=100%",
-                scrub: true
-            },
-            y: 150,
-            scale: 1.1
-        });
 
         // Excellence Section Animations
         gsap.from('#excellence-text', {

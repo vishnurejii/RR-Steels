@@ -24,4 +24,13 @@
     .industrial-card {
         @apply bg-white rounded-2xl border border-gray-100 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 overflow-hidden;
     }
+
+    .hexagon {
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        aspect-ratio: 1/1.15;
+    }
+
+    .mobile-menu-open {
+        @apply overflow-hidden;
+    }
 }
