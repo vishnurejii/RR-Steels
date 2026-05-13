@@ -11,7 +11,7 @@
     
     <!-- Centered Content -->
     <div class="relative z-10 text-center px-4" id="hero-content">
-        <h1 class="text-6xl md:text-9xl font-black uppercase italic tracking-tighter" id="hero-title">
+        <h1 class="text-4xl md:text-9xl font-black uppercase italic tracking-tighter" id="hero-title">
             R&nbsp;R <span class="text-transparent stroke-white" style="-webkit-text-stroke: 2px white;">STEELS</span>
         </h1>
         <p class="mt-6 text-xl md:text-3xl text-gray-300 font-light max-w-3xl mx-auto" id="hero-desc">
