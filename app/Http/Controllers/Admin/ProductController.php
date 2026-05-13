@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with('category')->latest()->paginate(20);
+        $products = Product::latest()->get();
         return view('admin.products.index', compact('products'));
     }
 
@@ -25,10 +25,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'category_id' => 'required|exists:categories,id',
+            'name'        => 'required|string|max:255',
+            'category_id' => 'required|string',
             'description' => 'required|string',
-            'price' => 'nullable|numeric',
+            'price'       => 'nullable|numeric',
             'is_featured' => 'boolean',
         ]);
 
@@ -52,10 +52,10 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'category_id' => 'required|exists:categories,id',
+            'name'        => 'required|string|max:255',
+            'category_id' => 'required|string',
             'description' => 'required|string',
-            'price' => 'nullable|numeric',
+            'price'       => 'nullable|numeric',
         ]);
 
         $validated['is_featured'] = $request->has('is_featured');

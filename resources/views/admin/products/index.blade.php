@@ -26,7 +26,7 @@
                         <div class="text-xs text-gray-400 font-bold uppercase tracking-widest">{{ $product->slug }}</div>
                     </td>
                     <td class="px-8 py-6 text-sm text-gray-600">
-                        {{ $product->category->name }}
+                        {{ \App\Models\Category::find($product->category_id)?->name ?? 'N/A' }}
                     </td>
                     <td class="px-8 py-6 text-sm font-bold text-gray-900">
                         ${{ number_format($product->price, 2) }}
@@ -52,6 +52,5 @@
     </div>
 </div>
 <div class="mt-8">
-    {{ $products->links() }}
 </div>
 @endsection
