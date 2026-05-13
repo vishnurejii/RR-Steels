@@ -5,7 +5,7 @@
 <section id="hero" class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black text-white">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0" id="hero-bg">
-        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000" class="w-full h-full object-cover opacity-60" alt="Steel Foundry">
+        <img src="/assets/images/hero-steel.jpg" class="w-full h-full object-cover opacity-60" alt="Steel Foundry">
         <div class="absolute inset-0 bg-black/40"></div>
     </div>
     
