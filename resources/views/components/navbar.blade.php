@@ -3,8 +3,8 @@
         <div class="flex justify-between h-20">
             <div class="flex items-center">
                 <a href="{{ route('home') }}" class="flex items-center space-x-2">
-                    <span class="text-2xl font-extrabold tracking-tighter uppercase italic">
-                        RR <span class="text-gray-400">STEEL</span>
+                    <span class="text-xl font-black uppercase italic tracking-tighter text-white">
+                        RR <span class="text-gray-500">STEEL</span>
                     </span>
                     <div class="w-2 h-8 bg-gray-500 transform -skew-x-12"></div>
                 </a>
@@ -19,7 +19,7 @@
                 
                 <!-- Logo in Right Corner -->
                 <div class="ml-4 border-l border-gray-700 pl-4">
-                    <img src="/assets/logo/logo.png" alt="RR STEEL Logo" class="h-12 w-auto object-contain">
+                    <img src="/assets/logo/logo.png" alt="RR STEEL Logo" class="h-12 w-12 rounded-full object-cover border-2 border-teal-600 shadow-lg">
                 </div>
             </div>
 
