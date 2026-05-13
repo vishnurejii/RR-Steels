@@ -1,10 +1,10 @@
 <nav id="navbar" class="w-full z-50 transition-all duration-500 {{ request()->routeIs('home') ? 'fixed top-0 bg-transparent' : 'sticky top-0 bg-gray-900 shadow-xl' }} text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20">
+        <div class="flex justify-between min-h-[110px] items-center">
             <div class="flex items-center">
-                <a href="{{ route('home') }}" class="flex items-center space-x-3">
-                    <img src="/assets/logo/logo.jpeg" alt="RR STEEL Logo" class="h-14 w-14 rounded-full object-cover border-2 border-teal-600 shadow-lg transition-transform hover:scale-110">
-                    <div class="w-2 h-8 bg-gray-500 transform -skew-x-12 ml-2"></div>
+                <a href="{{ route('home') }}" class="flex items-center py-2">
+                    <img src="/assets/logo/logo.jpeg" alt="RR STEEL Logo" class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover border-2 border-teal-600 shadow-xl transition-transform hover:scale-105">
+                    <div class="w-1 h-12 bg-gray-700 transform -skew-x-12 ml-4"></div>
                 </a>
             </div>
             
