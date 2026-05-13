@@ -13,6 +13,8 @@ services:
         value: mongodb
       - key: APP_URL
         value: https://rr-steels.onrender.com
+      - key: ASSET_URL
+        value: https://rr-steels.onrender.com
       - key: MONGODB_DATABASE
         value: steel_retail
       - key: APP_KEY
