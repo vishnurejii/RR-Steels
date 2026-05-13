@@ -23,10 +23,14 @@ class ProductVideoController extends Controller
     {
         $request->validate([
             'company_name' => 'required|string|max:255',
-            'video_url' => 'required|url',
+            'video_url'    => 'required|url',
         ]);
 
-        ProductVideo::create($request->all());
+        ProductVideo::create([
+            'company_name' => $request->company_name,
+            'video_url'    => $request->video_url,
+            'is_active'    => $request->has('is_active'),
+        ]);
 
         return redirect()->route('admin.videos.index')->with('success', 'Video added successfully.');
     }
@@ -40,10 +44,14 @@ class ProductVideoController extends Controller
     {
         $request->validate([
             'company_name' => 'required|string|max:255',
-            'video_url' => 'required|url',
+            'video_url'    => 'required|url',
         ]);
 
-        $video->update($request->all());
+        $video->update([
+            'company_name' => $request->company_name,
+            'video_url'    => $request->video_url,
+            'is_active'    => $request->has('is_active'),
+        ]);
 
         return redirect()->route('admin.videos.index')->with('success', 'Video updated successfully.');
     }
