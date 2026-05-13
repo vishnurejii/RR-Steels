@@ -331,8 +331,8 @@
                 @php
                 $contacts = [
                     ['icon'=>'📍','label'=>'Address','value'=>'RR Steels, Kanamkulanghara Road, Koorkenchery, Thrissur, Kerala 680007'],
-                    ['icon'=>'📞','label'=>'Phone','value'=>'+91 98470 00000'],
-                    ['icon'=>'✉️','label'=>'Email','value'=>'info@rrsteels.in'],
+                    ['icon'=>'📞','label'=>'Phone','value'=>'+91 98466 56868 (WA) / 8089187504'],
+                    ['icon'=>'✉️','label'=>'Email','value'=>'rrsteelk16@gmail.com'],
                     ['icon'=>'🕐','label'=>'Working Hours','value'=>'Monday – Saturday: 9:00 AM – 6:30 PM'],
                 ];
                 @endphp
